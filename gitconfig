@@ -1,0 +1,11 @@
+[color]
+	ui = true
+[alias]
+	s = status
+	d = diff
+	dc = diff --cached
+	ch = checkout
+	sls = stash list
+	spop = stash pop
+[credential]
+	helper = cache
