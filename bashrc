@@ -170,3 +170,5 @@ bind '"\C-g"':"\"fg\C-m\""
 bind '"\eu"':"\"cd ..\C-m\""
 
 alias pd='pwd | sed s,/home/pandu,~,'
+
+alias rm='echo "Use trash-put!"; false'
