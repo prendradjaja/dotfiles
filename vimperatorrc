@@ -1,0 +1,12 @@
+command! ReloadRC source ~/.vimperatorrc
+
+nnoremap h f
+nnoremap <c-f> /
+nnoremap , :
+nnoremap <f1> <nop>
+
+map <C-S-PageUp> :tabm -1<CR>
+map <C-S-PageDown> :tabm +1<CR>
+
+" set hintchars=teuhonidcprsa
+set status=input
