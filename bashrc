@@ -68,7 +68,7 @@ alias c........='cd ../../../../../../..'
 alias bat='upower -i /org/freedesktop/UPower/devices/battery_BAT0 | grep percentage:'
 
 bind '"\C-g"':"\"fg\C-m\""
-bind '"\eu"':"\"cd ..\C-m\""
+bind '"\eu"':"\"cd .. && l\C-m\""
 
 alias pd='pwd | sed s,/home/pandu,~,'
 
