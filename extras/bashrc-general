@@ -16,7 +16,7 @@ alias la='ls -A'
 alias l='ls -CF'
 
 PROMPT_COMMAND='DIR=`pwd|sed -e "s!$HOME!~!"`; if [ ${#DIR} -gt 28 ]; then CurDir=${DIR:0:9}...${DIR:${#DIR}-22}; else CurDir=$DIR; fi'
-PS1='\j ${CurDir} # '
+PS1='\j \u@\h ${CurDir} # '
 
 alias sshai='ssh cs188-jq@star.cs.berkeley.edu'
 alias sshos='ssh cs162-fn@star.cs.berkeley.edu'
