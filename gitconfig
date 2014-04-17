@@ -6,6 +6,8 @@
 	s = status
 	d = diff
 	dc = diff --cached
+	com = commit
+	p = add -p
 	ch = checkout
 	sls = stash list
 	spop = stash pop
