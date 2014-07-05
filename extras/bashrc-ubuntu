@@ -45,6 +45,13 @@ fi
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
 # sources /etc/bash.bashrc).
 if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
-    . /etc/bash_completion
+    # lazily enable bash completion
+    bind '"\C-i"':"\"\C-a#\C-mactivate-bash-completion\C-m\C-p\C-p\C-a\C-d\C-e\C-i\""
+    function activate-bash-completion () {
+        clear
+        . /etc/bash_completion
+        bind '"\C-i"':complete
+        unset -f activate-bash-completion
+    }
 fi
 

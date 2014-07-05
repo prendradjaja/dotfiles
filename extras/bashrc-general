@@ -1,3 +1,6 @@
+# undefine CTRL-S
+stty stop undef
+
 # enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
     test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
@@ -16,17 +19,18 @@ alias la='ls -A'
 alias l='ls -CF'
 
 PROMPT_COMMAND='DIR=`pwd|sed -e "s!$HOME!~!"`; if [ ${#DIR} -gt 28 ]; then CurDir=${DIR:0:9}...${DIR:${#DIR}-22}; else CurDir=$DIR; fi'
-PS1='\j \u@\h ${CurDir} # '
+PS1='\j [\h] ${CurDir} : '
 
 alias sshai='ssh cs188-jq@star.cs.berkeley.edu'
 alias sshos='ssh cs162-fn@star.cs.berkeley.edu'
 alias hive='ssh cs162-fn@hive17.cs.berkeley.edu'
 alias sshocf='ssh prendra@ssh.ocf.berkeley.edu'
 
-function mkcd () { command mkdir $1 && cd $1; } # why 'command'?
-function c () { command cd $1 && l; } # why 'command'?
+function mkcd () { command mkdir "$@" && cd "$@"; } # why 'command'?
+function c () { cd "$@" && l; }
 
 alias eh='xdg-open .'
+alias seh='xdg-open . & exit'
 
 alias cdp='cd -P .'
 alias cdpp='cd -P ..'
@@ -43,3 +47,10 @@ alias c.....='cd ../../../.. && l'
 alias c......='cd ../../../../.. && l'
 alias c.......='cd ../../../../../.. && l'
 alias c........='cd ../../../../../../.. && l'
+
+bind '"\C-g"':'"fg\C-m"'
+bind '"\eu"':'"cd .. && l\C-m"'
+
+alias xo='xdg-open'
+
+alias gc="clear && git diff --cached && echo ... && read && git commit"

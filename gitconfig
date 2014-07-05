@@ -13,3 +13,5 @@
 	spop = stash pop
 [credential]
 	helper = cache
+[core]
+	editor = vim -c DefaultColors
