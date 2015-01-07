@@ -23,4 +23,6 @@ alias ftsc='node ~/prog/TypeScript-frozen/built/local/tsc.js'
 alias scssdir="scss --watch scss:css"
 
 # python
+alias py='python'
+alias py3='python3'
 export PYTHONSTARTUP="/home/pandu/dotfiles/pythonrc"
