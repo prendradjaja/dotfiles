@@ -54,4 +54,3 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
         unset -f activate-bash-completion
     }
 fi
-

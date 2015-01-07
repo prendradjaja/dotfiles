@@ -1,2 +1,0 @@
-# Is there any way I can detect whether or not I can use this?
-PS1='\j \[\033[1m\]${CurDir}\[\033[0m\] '
