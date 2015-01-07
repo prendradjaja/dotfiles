@@ -10,6 +10,6 @@ Copy GNOME terminal profile:
 
     cp -r ~/dotfiles/gnome-terminal/profiles/Profile3/ ~/.gconf/apps/gnome-terminal/profiles/
 
-Then use gconf-editor to edit the profile list: /apps/gnome/terminal/global/profile_list
+Then use `gconf-editor` to edit the profile list: /apps/gnome/terminal/global/profile_list
 
 This will require logging out and back in again to take effect.
