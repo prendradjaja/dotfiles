@@ -1,11 +1,15 @@
-personal_ws-1.1 en 17 
+personal_ws-1.1 en 21 
 structs
 tmcat
 Vimscript
 Pandu
+js
 multi
 MapReduce
+desugaring
 yacc
+interoperability
+Jison
 reimplementation
 grey
 bytecode
