@@ -9,7 +9,7 @@ alias lt="ls | grep -v '\.\(pdf\|aux\|log\)$' | column"
 mkcd () { command mkdir "$@" && cd "$@"; } # why 'command'?
 c () { cd "$@" && l; }
 
-co() { cd ~/c/$1; }
+co() { cd ~/c/$1 && l; }
 _include _co.sh
 
 alias cdp='cd -P .'
@@ -21,7 +21,7 @@ alias pd='pwd | sed s,/home/pandu,~,'
 alias eh='xdg-open .'
 alias seh='xdg-open . & exit'
 
-alias xo='xdg-open'
+alias o='xdg-open'
 
 # use trash-put instead of rm
 alias rm='echo "Use trash-put!"; false'

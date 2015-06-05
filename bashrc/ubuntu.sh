@@ -41,16 +41,20 @@ if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
 
+# lazily enable completion: uncomment me and comment paragraph below
+# if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
+#     bind '"\C-i"':"\"\C-a#\C-mactivate-bash-completion\C-m\C-p\C-p\C-a\C-d\C-e\C-i\""
+#     function activate-bash-completion () {
+#         clear
+#         . /etc/bash_completion
+#         bind '"\C-i"':complete
+#         unset -f activate-bash-completion
+#     }
+# fi
+
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
 # sources /etc/bash.bashrc).
 if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
-    # lazily enable bash completion
-    bind '"\C-i"':"\"\C-a#\C-mactivate-bash-completion\C-m\C-p\C-p\C-a\C-d\C-e\C-i\""
-    function activate-bash-completion () {
-        clear
-        . /etc/bash_completion
-        bind '"\C-i"':complete
-        unset -f activate-bash-completion
-    }
+    . /etc/bash_completion
 fi

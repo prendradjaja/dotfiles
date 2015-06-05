@@ -8,4 +8,4 @@ alias octave='octave -q'
 ff () { firefox -new-window $1 & }
 
 # pronunciation dictionary
-alias p='python3 ~/prog/ipa-dict/main.py'
+alias p='python3 ~/c/prog/ipa-dict/main.py'
