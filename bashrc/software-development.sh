@@ -1,4 +1,5 @@
 # vim
+EDITOR=vim
 alias e='vim'
 gvim () { (/usr/bin/gvim -f "$@" &) }
 
