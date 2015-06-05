@@ -1,4 +1,4 @@
-personal_ws-1.1 en 21 
+personal_ws-1.1 en 22 
 structs
 tmcat
 Vimscript
@@ -13,6 +13,7 @@ Jison
 reimplementation
 grey
 bytecode
+Chai
 lex
 Hadoop
 coroutines
