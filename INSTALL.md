@@ -1,3 +1,7 @@
+Run the following to set environment for local customizations:
+
+    ~/dotfiles/localize.sh
+
 Ensure that the following symlinks exist:
 
     ln -s ~/dotfiles/bashrc/main.sh ~/.bashrc
