@@ -8,7 +8,6 @@ Create symlinks:
     ln -s ~/dotfiles/gitconfig      ~/.gitconfig
     ln -s ~/dotfiles/tmux.conf      ~/.tmux.conf
     ln -s ~/dotfiles/inputrc        ~/.inputrc
-    ln -s ~/dotfiles/vimperatorrc   ~/.vimperatorrc
 
 Make and populate ~/c directory:
 
