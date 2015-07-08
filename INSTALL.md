@@ -2,13 +2,19 @@ Run the following to set environment for local customizations:
 
     ~/dotfiles/localize.sh
 
-Ensure that the following symlinks exist:
+Create symlinks:
 
     ln -s ~/dotfiles/bashrc/main.sh ~/.bashrc
-    ln -s ~/dotfiles/gitconfig ~/.gitconfig
-    ln -s ~/dotfiles/tmux.conf ~/.tmux.conf
-    ln -s ~/dotfiles/inputrc ~/.inputrc
-    ln -s ~/dotfiles/vimperatorrc ~/.vimperatorrc
+    ln -s ~/dotfiles/gitconfig      ~/.gitconfig
+    ln -s ~/dotfiles/tmux.conf      ~/.tmux.conf
+    ln -s ~/dotfiles/inputrc        ~/.inputrc
+    ln -s ~/dotfiles/vimperatorrc   ~/.vimperatorrc
+
+Make and populate ~/c directory:
+
+    mkdir ~/c
+    ln -s ~/dotfiles  ~/c/dotfiles
+    ln -s ~/vimconfig ~/c/vimconfig
 
 Copy GNOME terminal profile:
 
