@@ -2,6 +2,8 @@
 
 _include () { source ~/dotfiles/bashrc/$1; }
 
+# _include local/FOO/before.sh
+
 _include ubuntu.sh
 _include general.sh
 _include prompt.sh
@@ -14,5 +16,7 @@ _include navigation-and-files.sh
 _include software-development.sh
 _include other-programs.sh
 _include text-processing.sh
+
+# _include local/FOO/after.sh
 
 unset -f _include
