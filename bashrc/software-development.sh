@@ -1,6 +1,7 @@
 # vim
 EDITOR=vim
 alias e='vim'
+alias ge='gvim'
 gvim () { (/usr/bin/gvim -f "$@" &) }
 
 # ed
@@ -26,4 +27,7 @@ alias scssdir="scss --watch scss:css"
 # python
 alias py='python'
 alias py3='python3'
-export PYTHONSTARTUP="/home/pandu/dotfiles/pythonrc"
+export PYTHONSTARTUP="/home/$USER/dotfiles/pythonrc"
+
+# done
+alias done="python -c \"for i in range(10): print '#' * 75\""

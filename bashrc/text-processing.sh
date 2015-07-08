@@ -1,5 +1,5 @@
 # colorize-diff
-alias cod="colorize-diff"
+alias cod="sed 's/^-/\x1b[31m-/;s/^+/\x1b[32m+/;s/^@/\x1b[34m@/;s/$/\x1b[0m/' | less -R"
 
 # less
 alias le="less"
