@@ -29,5 +29,5 @@ alias py='python'
 alias py3='python3'
 export PYTHONSTARTUP="/home/$USER/dotfiles/pythonrc"
 
-# done
-alias done="python -c \"for i in range(10): print '#' * 75\""
+# "visual bell"
+alias vbel="python -c \"for i in range(10): print '#' * 75\""
