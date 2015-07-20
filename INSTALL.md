@@ -13,7 +13,7 @@ Make and populate ~/c directory:
 
     mkdir ~/c
     ln -s ~/dotfiles  ~/c/dotfiles
-    ln -s ~/vimconfig ~/c/vimconfig
+    ln -s ~/.vim ~/c/vimconfig
 
 Copy GNOME terminal profile:
 
