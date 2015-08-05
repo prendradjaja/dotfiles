@@ -3,7 +3,6 @@
 _include () { source ~/dotfiles/bashrc/$1; }
 
 _include local/whereami.sh
-
 _include local/$WHEREAMI/before.sh
 
 _include ubuntu.sh
