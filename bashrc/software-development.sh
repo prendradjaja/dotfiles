@@ -1,5 +1,5 @@
 # vim
-EDITOR=vim
+export EDITOR=vim
 alias e='vim'
 alias ge='gvim'
 gvim () { (/usr/bin/gvim -f "$@" &) }
