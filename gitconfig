@@ -7,11 +7,13 @@
 	s = status
 	d = diff
 	dc = diff --cached
-	com = commit
 	p = add -p
-	ch = checkout
 	sls = stash list
 	spop = stash pop
+	co = checkout
+	ff = pull --ff-only
+	cpn = cherry-pick -n
+	tree = log --oneline --graph --all --decorate --abbrev-commit
 [credential]
 	helper = cache
 [core]
