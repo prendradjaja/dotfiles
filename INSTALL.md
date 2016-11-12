@@ -22,3 +22,5 @@ Copy GNOME terminal profile:
 Then use `gconf-editor` to edit the profile list: /apps/gnome/terminal/global/profile_list
 
 This will require logging out and back in again to take effect.
+
+TODO source git-completion.bash
