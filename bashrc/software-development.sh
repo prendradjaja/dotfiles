@@ -28,7 +28,7 @@ alias scssdir="scss --watch scss:css"
 # python
 alias py='python'
 alias py3='python3'
-export PYTHONSTARTUP="/home/$USER/dotfiles/pythonrc"
+export PYTHONSTARTUP="$HOME/dotfiles/pythonrc"
 
 # "visual bell"
 alias vbel="python -c \"for i in range(10): print '#' * 75\""
