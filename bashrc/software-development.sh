@@ -32,3 +32,8 @@ export PYTHONSTARTUP="$HOME/dotfiles/pythonrc"
 
 # "visual bell"
 alias vbel="python -c \"for i in range(10): print '#' * 75\""
+
+# npm helpers
+alias npm-list-toplevel-g="npm list -g --depth=0 2>/dev/null"
+alias npm-list-toplevel="npm list --depth=0 2>/dev/null"
+function ndo { (PATH=$(npm bin):$PATH; eval $@;) }
