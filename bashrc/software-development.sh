@@ -28,6 +28,8 @@ alias scssdir="scss --watch scss:css"
 # python
 alias py='python'
 alias py3='python3'
+alias ipy='ipython'
+alias ipy3='ipython3'
 export PYTHONSTARTUP="$HOME/dotfiles/pythonrc"
 
 # "visual bell"
@@ -37,3 +39,6 @@ alias vbel="python -c \"for i in range(10): print '#' * 75\""
 alias npm-list-toplevel-g="npm list -g --depth=0 2>/dev/null"
 alias npm-list-toplevel="npm list --depth=0 2>/dev/null"
 function ndo { (PATH=$(npm bin):$PATH; eval $@;) }
+
+# import git repo
+alias git-import="python ~/dotfiles/git-import/main.py $1"
