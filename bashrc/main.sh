@@ -18,6 +18,8 @@ _include software-development.sh
 _include other-programs.sh
 _include text-processing.sh
 
+_include sprot.sh
+
 _include local/$WHEREAMI/after.sh
 
 unset -f _include
