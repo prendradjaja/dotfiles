@@ -36,3 +36,12 @@ _include _tplate.sh
 
 # smart "du" -- shows sizes of stuff
 sdu() { paste <(du -s *) <(du -sh *) | sort -rn | awk -F'\t' '{print $3 "\t" $4}' | less; }
+
+# cd into a file's dir
+fcd() { cd "$(dirname "$1")"; }
+# "N"avigate and "O"pen
+no() {
+    local myFile=$(xsel --clipboard)
+    fcd "$myFile"
+    vim +QuickOpen "$myFile"
+}
