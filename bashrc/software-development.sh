@@ -13,8 +13,9 @@ alias ta='tmux attach'
 
 # git
 alias g='git'
+alias h='git'
 alias gc="clear && git diff --cached && echo ... && read && git commit"
-fuckg () { eval git $@ 2>&1 | grep '^    git'; }
+alias hc="clear && git diff --cached && echo ... && read && git commit"
 
 # http server
 alias ph='python -m SimpleHTTPServer 8000'
