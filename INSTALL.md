@@ -15,6 +15,8 @@ Make and populate ~/c directory:
     ln -s ~/dotfiles ~/c/dotfiles
     ln -s ~/.vim     ~/c/vimconfig
 
+**Use a local branch**
+
 Copy GNOME terminal profile:
 
     cp -r ~/dotfiles/gnome-terminal/profiles/Profile3/ ~/.gconf/apps/gnome-terminal/profiles/
