@@ -46,4 +46,4 @@ alias npm-list-toplevel="npm list --depth=0 2>/dev/null"
 function ndo { (PATH=$(npm bin):$PATH; eval $@;) }
 
 # import git repo
-alias git-import="python ~/dotfiles/git-import/main.py $1"
+alias git-import="python ~/dotfiles/git-import/main.py"

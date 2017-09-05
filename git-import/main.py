@@ -1,9 +1,12 @@
 import sys
 import os
 
-assert len(sys.argv) == 3
+assert len(sys.argv) == 2
 
-raw_url = sys.argv[2]
+raw_url = sys.argv[1]
+
+print(raw_url)
+exit()
 
 class FORMATS:
     BITBUCKET = 'https://bitbucket.org'
