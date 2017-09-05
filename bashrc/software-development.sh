@@ -19,7 +19,7 @@ alias hc="clear && git diff --cached && echo ... && read && git commit"
 # "stash apply"
 function sa { git stash apply "stash@{$1}"; }
 # "stash unapply"
-function su { git stash apply "stash@{$1}" | git apply --reverse; }
+function su { git stash show -p "stash@{$1}" | git apply --reverse; }
 
 # http server
 alias ph='python -m SimpleHTTPServer 8000'
