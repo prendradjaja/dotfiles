@@ -5,3 +5,5 @@ export PATH=$PATH:$EC2_HOME/bin
 
 alias ssh-dos="ssh pandu@138.197.204.111 -i ~/.ssh/digital-ocean-sandbox"
 alias localdb="mysql -u local ESI"
+
+alias st="~/personal/stashtag/stashtag.py"
