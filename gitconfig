@@ -12,6 +12,7 @@
 	spop = stash pop
 	co = checkout
 	ff = pull --ff-only
+	cp = cherry-pick
 	cpn = cherry-pick -n
 	tree = log --oneline --graph --all --decorate --abbrev-commit
 [credential]

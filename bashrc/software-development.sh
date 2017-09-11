@@ -13,7 +13,7 @@ alias ta='tmux attach'
 
 # git
 alias g='git'
-alias h='git'
+alias h='~/personal/git-vertigo/wrapper.py'
 alias gc="clear && git diff --cached && echo ... && read && git commit"
 alias hc="clear && git diff --cached && echo ... && read && git commit"
 # "stash apply"

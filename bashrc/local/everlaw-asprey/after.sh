@@ -14,3 +14,6 @@ alias st="~/personal/stashtag/stashtag.py"
 source ~/dotfiles/git-completion.bash
 
 alias jiw="~/personal/jq-interactive-wrapper/jiw.py"
+
+# i can't remember why i chose this name, but it's basically like "github PR version of git log"
+alias hr="git log develop.. --pretty=oneline | tac"
