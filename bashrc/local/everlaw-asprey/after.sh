@@ -21,6 +21,13 @@ alias jiw="~/personal/jq-interactive-wrapper/jiw.py"
 alias hr="git log develop.. --pretty=oneline | tac"
 
 alias ab='git antebase'
+# antebase auto
+alias aba='git antebase -i HEAD~$(hr | wc -l)'
+# antebase success
 alias abs='git antebase --success'
+# antebase failure
 alias abf='git antebase --failure'
+# antebase check-state
 alias abc='git antebase --check-state'
+
+alias hl='echo WARNING: hardcoded to xxpcx; git branch | grep xxpcx'
