@@ -19,3 +19,8 @@ alias jiw="~/personal/jq-interactive-wrapper/jiw.py"
 
 # i can't remember why i chose this name, but it's basically like "github PR version of git log"
 alias hr="git log develop.. --pretty=oneline | tac"
+
+alias ab='git antebase'
+alias abs='git antebase --success'
+alias abf='git antebase --failure'
+alias abc='git antebase --check-state'
