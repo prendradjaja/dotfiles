@@ -15,6 +15,7 @@
 	cp = cherry-pick
 	cpn = cherry-pick -n
 	tree = log --oneline --graph --all --decorate --abbrev-commit
+	ppush = push --repo=pandu-github
 [credential]
 	helper = cache
 [core]

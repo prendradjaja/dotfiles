@@ -5,9 +5,10 @@ export PATH=$PATH:$EC2_HOME/bin
 
 export GOPATH=/home/pandu/tools/gohome
 export PATH=$PATH:$GOPATH/bin
+export PATH=$PATH:/home/pandu/tools/prebase
 
 alias ssh-dos="ssh pandu@138.197.204.111 -i ~/.ssh/digital-ocean-sandbox"
-alias localdb="mysql -u local ESI"
+alias ldb="mysql -u local ESI"
 
 alias st="~/personal/stashtag/stashtag.py"
 
