@@ -16,7 +16,11 @@
 	cpn = cherry-pick -n
 	tree = log --oneline --graph --all --decorate --abbrev-commit
 	ppush = push --repo=pandu-github
+	ppushf = push --repo=pandu-github --force
 [credential]
 	helper = cache
 [core]
 	editor = vim -c DefaultColors
+[merge]
+	conflictstyle = diff3
+	tool = vimdiff

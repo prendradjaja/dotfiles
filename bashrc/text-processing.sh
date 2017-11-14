@@ -1,5 +1,6 @@
 # colorize-diff
 alias cod="sed 's/^-/\x1b[31m-/;s/^+/\x1b[32m+/;s/^@/\x1b[34m@/;s/$/\x1b[0m/' | less -R"
+alias gdiff="git diff --no-index"
 
 # less
 alias le="less"

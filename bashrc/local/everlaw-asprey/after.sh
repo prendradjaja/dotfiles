@@ -18,16 +18,19 @@ source ~/dotfiles/git-completion.bash
 alias jiw="~/personal/jq-interactive-wrapper/jiw.py"
 
 # i can't remember why i chose this name, but it's basically like "github PR version of git log"
-alias hr="git log develop.. --pretty=oneline | tac"
+# alias hr="git log develop.. --pretty=format:\"%h %s\" | tac"
+alias hr="cat <(git log develop.. --pretty=format:\"%h %s\" | dos2unix) <(echo) | tac"
 
-alias ab='git antebase'
-# antebase auto
-alias aba='git antebase -i HEAD~$(hr | wc -l)'
-# antebase success
-alias abs='git antebase --success'
-# antebase failure
-alias abf='git antebase --failure'
-# antebase check-state
-alias abc='git antebase --check-state'
+alias abo='git antebase onto develop'
+alias abi='git antebase interactive develop'
+alias absu='git antebase success'
+alias abf='git antebase failure'
+alias abst='git antebase status'
+alias abl='git antebase log | head'
+
+alias prebase='git prebase HEAD~$(hr | wc -l)'
 
 alias hl='echo WARNING: hardcoded to xxpcx; git branch | grep xxpcx'
+
+# vim json
+alias vj='clip | jq . | e -'
