@@ -8,6 +8,11 @@ export PATH=$PATH:$GOPATH/bin
 export PATH=$PATH:/home/pandu/tools/prebase
 export PATH=$PATH:/home/pandu/personal/git-antebase
 export PATH=$PATH:/home/pandu/personal/git-filelog
+export PATH=$PATH:/home/pandu/personal/git-filelog
+export PATH=$PATH:/home/pandu/.cargo/bin
+
+export PATH=$PATH:/home/pandu/personal/bujo.txt
+alias bu='bujo'
 
 flog() { git filelog "$@" | less -R; }
 
