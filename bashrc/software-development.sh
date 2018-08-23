@@ -16,6 +16,14 @@ alias g='git'
 alias h='~/personal/git-vertigo/wrapper.py'
 alias gc="clear && git diff --cached && echo ... && read && git commit"
 alias hc="clear && git diff --cached && echo ... && read && git commit"
+alias hs='git status && echo && git lg1 | head -n1'
+alias hd='git diff'
+alias hac="\
+    export GIT_EDITOR=nano && \
+    git add -u        && clear && \
+    git status        && echo ... && read && clear && \
+    git diff --cached && echo ... && read && \
+    git commit"
 # "stash apply"
 function sta { git stash apply "stash@{$1}"; }
 # "stash unapply"

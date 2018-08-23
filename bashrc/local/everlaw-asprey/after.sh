@@ -7,6 +7,9 @@ export GOPATH=/home/pandu/tools/gohome
 export PATH=$PATH:$GOPATH/bin
 export PATH=$PATH:/home/pandu/tools/prebase
 export PATH=$PATH:/home/pandu/personal/git-antebase
+export PATH=$PATH:/home/pandu/personal/git-filelog
+
+flog() { git filelog "$@" | less -R; }
 
 alias ssh-dos="ssh pandu@138.197.204.111 -i ~/.ssh/digital-ocean-sandbox"
 alias ldb="mysql -u local ESI"
