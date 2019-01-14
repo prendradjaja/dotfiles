@@ -1,7 +1,6 @@
 # vim
 export EDITOR=vim
 alias e='vim'
-# e () { cd "$1" || vim "$1"; }  # empty behavior still should open vim.
 alias ge='gvim'
 gvim () { (/usr/bin/gvim -f "$@" &) }
 
@@ -14,7 +13,8 @@ alias ta='tmux attach'
 
 # git
 alias g='git'
-alias h='~/personal/git-vertigo/wrapper.py'
+alias h='git'
+# alias h='~/personal/git-vertigo/wrapper.py'
 alias gc="clear && git diff --cached && echo ... && read && git commit"
 alias hc="clear && git diff --cached && echo ... && read && git commit"
 alias hs='git status && echo && git lg1 | head -n1'

@@ -23,9 +23,3 @@ _include sprot.sh
 _include local/$WHEREAMI/after.sh
 
 unset -f _include
-
-# date-time stuff
-DTS1=feature/date-time-datetime-null
-DTS2=feature/date-time-datetime-null---overflow
-
-DP=pandu/new-date-picker
