@@ -1,6 +1,6 @@
 # ls
 alias l='ls -CF'
-alias ls='ls --color=auto'
+alias ls='ls'  # --color=auto is nice to have but doesn't work on Mac
 alias la='ls -A'
 alias ll='ls -alF'
 alias lt="ls | grep -v '\.\(pdf\|aux\|log\)$' | column"
