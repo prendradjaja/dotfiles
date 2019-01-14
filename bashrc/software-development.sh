@@ -14,8 +14,23 @@ alias ta='tmux attach'
 # git
 alias g='git'
 alias h='git'
+# alias h='~/personal/git-vertigo/wrapper.py'
 alias gc="clear && git diff --cached && echo ... && read && git commit"
 alias hc="clear && git diff --cached && echo ... && read && git commit"
+alias hs='git status && echo && git lg1 | head -n1'
+alias hd='git diff'
+alias hac="\
+    export GIT_EDITOR='vim -c \"inoremap <c-m> <esc>ZZ\" -c startinsert' && \
+    git add -u        && clear && \
+    git status        && echo ... && read && clear && \
+    git diff --cached && echo ... && read && \
+    git commit"
+# "stash apply"
+function sta { git stash apply "stash@{$1}"; }
+# "stash unapply"
+function stu { git stash show -p "stash@{$1}" | git apply --reverse; }
+# "stash show"
+function sts { git show "stash@{$1}"; }
 
 # http server
 alias ph='python -m SimpleHTTPServer 8000'
@@ -42,4 +57,4 @@ alias npm-list-toplevel="npm list --depth=0 2>/dev/null"
 function ndo { (PATH=$(npm bin):$PATH; eval $@;) }
 
 # import git repo
-alias git-import="python ~/dotfiles/git-import/main.py $1"
+alias git-import="python ~/dotfiles/git-import/main.py"

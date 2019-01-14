@@ -12,9 +12,23 @@
 	spop = stash pop
 	co = checkout
 	ff = pull --ff-only
+	cp = cherry-pick
 	cpn = cherry-pick -n
 	tree = log --oneline --graph --all --decorate --abbrev-commit
+	tree-partial = log --oneline --graph --decorate --abbrev-commit
+	log1 = log --pretty=tformat:"%h%x09%an%x09%ad%x09%s"
+	lg1   = log --pretty=tformat:"%h%x09%s"
+	log1s = log --pretty=tformat:"%h%x09%s"
+    history = log
+	ppush = push --repo=pandu-github
+	ppushf = push --repo=pandu-github --force
+	ndshow = show --diff-filter=ACMRTUXB
+	nddiff = diff --diff-filter=ACMRTUXB
+	shname = show --name-status
 [credential]
 	helper = cache
 [core]
 	editor = vim -c DefaultColors
+[merge]
+	conflictstyle = diff3
+	tool = vimdiff

@@ -1,9 +1,9 @@
 import sys
 import os
 
-assert len(sys.argv) == 3
+assert len(sys.argv) == 2
 
-raw_url = sys.argv[2]
+raw_url = sys.argv[1]
 
 class FORMATS:
     BITBUCKET = 'https://bitbucket.org'
@@ -45,4 +45,3 @@ else:
     exit(1)
 
 os.system('git remote add origin {} && git push -u origin master'.format(url))
-
