@@ -12,6 +12,7 @@ alias t='tmux'
 alias ta='tmux attach'
 
 # git
+source ~/dotfiles/git-completion.bash
 alias g='git'
 alias h='git'
 # alias h='~/personal/git-vertigo/wrapper.py'
@@ -22,6 +23,12 @@ alias hd='git diff'
 alias hac="\
     export GIT_EDITOR='vim -c \"inoremap <c-m> <esc>ZZ\" -c startinsert' && \
     git add -u        && clear && \
+    git status        && echo ... && read && clear && \
+    git diff --cached && echo ... && read && \
+    git commit"
+alias hach="\
+    export GIT_EDITOR='vim -c \"inoremap <c-m> <esc>ZZ\" -c startinsert' && \
+    git add -u .      && clear && \
     git status        && echo ... && read && clear && \
     git diff --cached && echo ... && read && \
     git commit"

@@ -41,7 +41,8 @@ sdu() { paste <(du -s *) <(du -sh *) | sort -rn | awk -F'\t' '{print $3 "\t" $4}
 fcd() { cd "$(dirname "$1")"; }
 # "N"avigate and "O"pen
 no() {
-    local myFile=$(xsel --clipboard)
+    local myFile=$(pbpaste)
     fcd "$myFile"
-    vim +QuickOpen "$myFile"
+    # vim +QuickOpen "$myFile"
+    vim "$myFile"
 }
