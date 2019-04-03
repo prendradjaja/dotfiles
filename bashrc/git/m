@@ -1,0 +1,25 @@
+#!/usr/bin/env python3
+
+from git_utils import get_branch
+import re
+
+# def get_branch():
+#     return 'pandu/12345--abc'
+#     # return 'pandu/12345--abc.d/asdf'
+#     # return 'pandu/12345--abc.d/asdf.d/aoeu'
+#     # return 'pandu/x12345--abc'
+
+
+def get_mainline(branch):
+    if not re.match(r'^pandu\/\d+.*$', branch):
+        raise ValueError('Not a valid branch format')
+    if '.d/' in branch:
+        return branch.split('.d/')[0]
+    else:
+        return branch
+
+def main(branch):
+    print(get_mainline(branch))
+
+if __name__ == '__main__':
+    main(get_branch())

@@ -32,12 +32,16 @@ alias hach="\
     git status        && echo ... && read && clear && \
     git diff --cached && echo ... && read && \
     git commit"
+alias push="git push"
 # "stash apply"
 function sta { git stash apply "stash@{$1}"; }
 # "stash unapply"
 function stu { git stash show -p "stash@{$1}" | git apply --reverse; }
 # "stash show"
 function sts { git show "stash@{$1}"; }
+function edit-conflicts {
+    git status && vim `git diff --name-only | uniq`
+}
 
 # http server
 alias ph='python -m SimpleHTTPServer 8000'

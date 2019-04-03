@@ -4,10 +4,15 @@ alias ls='ls'  # --color=auto is nice to have but doesn't work on Mac
 alias la='ls -A'
 alias ll='ls -alF'
 alias lt="ls | grep -v '\.\(pdf\|aux\|log\)$' | column"
+# ls with color on mac
+export CLICOLOR=1
 
 # cd and physical directories
 mkcd () { command mkdir "$@" && cd "$@"; } # why 'command'?
 c () { cd "$@" && l; }
+# cd and c should only complete with directories (not files)
+complete -d cd
+complete -d c
 
 co() { cd ~/c/$1 && l; }
 _include _co.sh
@@ -46,3 +51,13 @@ no() {
     # vim +QuickOpen "$myFile"
     vim "$myFile"
 }
+
+# going up
+alias ..="cd .. && l"
+alias ...="cd ../.. && l"
+alias ....="cd ../../.. && l"
+alias .....="cd ../../../.. && l"
+alias ......="cd ../../../../.. && l"
+alias .......="cd ../../../../../.. && l"
+alias ........="cd ../../../../../../.. && l"
+alias .........="cd ../../../../../../../.. && l"

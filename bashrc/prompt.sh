@@ -1,5 +1,9 @@
 PROMPT_COMMAND='DIR=`pwd|sed -e "s!$HOME!~!"`; if [ ${#DIR} -gt 28 ]; then CurDir=${DIR:0:9}...${DIR:${#DIR}-22}; else CurDir=$DIR; fi'
 
+# Show jobs if nonzero https://unix.stackexchange.com/questions/35728/is-it-possible-to-customise-the-prompt-to-show-the-if-there-are-any-background-j
+# PROMPT_COMMAND='hasjobs=$(jobs -p)'
+# PS1='${hasjobs:+\j }\$ '
+
 # No hostname
 PS1='\j \[\033[1m\]${CurDir}\[\033[0m\] '
 

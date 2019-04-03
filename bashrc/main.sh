@@ -21,6 +21,7 @@ _include text-processing.sh
 _include sprot.sh
 
 _include local/$WHEREAMI/after.sh
+_include nocommit.sh
 
 unset -f _include
 
@@ -40,4 +41,36 @@ hb () {
 
 hbn () {
     git checkout $(sed "$1q;d" <(_hb))
+}
+
+# for npm -g http://michaelb.org/the-right-way-to-do-global-npm-install-without-sudo/
+PATH=~/.local/bin/:$PATH
+
+alias messenger=fb-messenger-cli
+
+start-ssh-agent () {
+  eval "$(ssh-agent -s)"
+  echo "Now run: ssh-add PATH_TO_KEY"
+}
+
+_start-ssh-agent () {
+  eval "$(ssh-agent -s)"
+}
+
+s
+
+alias m="~/dotfiles/bashrc/git/m"
+mm () {
+  if [ -z "$1" ]
+  then
+    git checkout `m`
+  else
+    git checkout `m`.d/$1
+  fi
+}
+ml () {
+  hb | grep `m`
+}
+mll () {
+  git branch | grep `m`
 }
