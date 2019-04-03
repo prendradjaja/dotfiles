@@ -1,0 +1,24 @@
+# Unmap navigation things
+unmap r
+unmap x
+unmap p
+unmap P
+unmap gu
+unmap gU
+unmap H
+unmap L
+
+# What do insert and visual mode even do?
+unmap i
+unmap v
+unmap V
+
+# Unmap other things
+unmap t
+
+# Link hints
+unmap f
+unmap <a-f>
+map gh LinkHints.activateMode
+map gH LinkHints.activateModeToOpenInNewTab
+map GH LinkHints.activateModeToOpenInNewTab
