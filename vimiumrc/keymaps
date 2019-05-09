@@ -15,6 +15,9 @@ unmap V
 
 # Unmap other things
 unmap t
+unmap /
+unmap n
+unmap N
 
 # Link hints
 unmap f
