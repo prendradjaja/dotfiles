@@ -25,3 +25,7 @@ unmap <a-f>
 map gh LinkHints.activateMode
 map gH LinkHints.activateModeToOpenInNewTab
 map GH LinkHints.activateModeToOpenInNewTab
+
+# This is intuitive for history; next/prev are flaky anyway
+map ]] goForward
+map [[ goBack
