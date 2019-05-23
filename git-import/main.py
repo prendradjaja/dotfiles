@@ -19,7 +19,7 @@ def fix(raw_url, format):
     'https://github.com/prendradjaja/foo.git'
     """
     if format == FORMATS.BITBUCKET:
-        _, _, _, user, repo = raw_url.split('/')
+        _, _, _, user, repo, _ = raw_url.split('/')
         return 'https://{user}@bitbucket.org/{user}/{repo}.git'.format(**{
             'user': user,
             'repo': repo })
