@@ -17,8 +17,15 @@ alias g='git'
 alias h='git'
 # alias h='~/personal/git-vertigo/wrapper.py'
 alias gc="clear && git diff --cached && echo ... && read && git commit"
-alias hc="clear && git diff --cached && echo ... && read && git commit"
+# alias hc="clear && git diff --cached && echo ... && read && git commit"
+alias hc="\
+    export GIT_EDITOR='vim -c \"inoremap <c-m> <esc>ZZ\" -c startinsert' && \
+    clear && \
+    git status        && echo ... && read && clear && \
+    git diff --cached && echo ... && read && \
+    git commit"
 alias hs='git status && echo && git lg1 | head -n1'
+alias hs.='git status . && echo && git lg1 | head -n1'
 alias hd='git diff'
 alias hac="\
     export GIT_EDITOR='vim -c \"inoremap <c-m> <esc>ZZ\" -c startinsert' && \
@@ -32,7 +39,14 @@ alias hach="\
     git status        && echo ... && read && clear && \
     git diff --cached && echo ... && read && \
     git commit"
+# 2 = faster
+alias hac2="\
+    git add -u        && clear && \
+    git diff --cached && echo ... && read && \
+    git commit -m '++' && git push"
 alias push="git push"
+alias fetch="git fetch"
+alias ff="git ff"
 # "stash apply"
 function sta { git stash apply "stash@{$1}"; }
 # "stash unapply"
