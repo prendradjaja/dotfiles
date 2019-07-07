@@ -19,6 +19,7 @@ _include other-programs.sh
 _include text-processing.sh
 
 _include sprot.sh
+_include notes.sh
 
 _include local/$WHEREAMI/after.sh
 _include nocommit.sh
@@ -42,6 +43,16 @@ hb () {
 hbn () {
     git checkout $(sed "$1q;d" <(_hb))
 }
+alias hb1="hbn 1"
+alias hb2="hbn 2"
+alias hb3="hbn 3"
+alias hb4="hbn 4"
+alias hb5="hbn 5"
+alias hb6="hbn 6"
+alias hb7="hbn 7"
+alias hb8="hbn 8"
+alias hb9="hbn 9"
+alias hb10="hbn 0"
 
 # for npm -g http://michaelb.org/the-right-way-to-do-global-npm-install-without-sudo/
 PATH=~/.local/bin/:$PATH
@@ -74,3 +85,19 @@ ml () {
 mll () {
   git branch | grep `m`
 }
+
+alias todo="vim +Todo"
+
+alias ct="co client_app && t"
+alias slog="sleep 20 && logs"
+
+PATH=$PATH:~/tools/node_stuff/node_modules/coffeescript/bin
+# alias markdown-toc="~/tools/node_stuff/node_modules/markdown-toc/cli.js"
+# alias toc="markdown-toc"
+#
+# alias hct="markdown-toc -i REFERENCE.md && markdown-toc -i README.md && hac2"
+
+alias ee="vim +CtrlP"
+
+
+PATH=$PATH:~/personal/git-splitter
