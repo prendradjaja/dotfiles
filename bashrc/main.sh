@@ -23,3 +23,11 @@ _include sprot.sh
 _include local/$WHEREAMI/after.sh
 
 unset -f _include
+
+alias ..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
+alias .....="cd ../../../.."
+
+alias curln="curl -w \"\\n\""
+alias hk="heroku"

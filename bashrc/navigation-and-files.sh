@@ -1,6 +1,6 @@
 # ls
 alias l='ls -CF'
-alias ls='ls --color=auto'
+# alias ls='ls --color=auto'
 alias la='ls -A'
 alias ll='ls -alF'
 alias lt="ls | grep -v '\.\(pdf\|aux\|log\)$' | column"
@@ -24,8 +24,8 @@ alias seh='xdg-open . & exit'
 alias o='xdg-open'
 
 # use trash-put instead of rm
-alias rm='echo "Use trash-put!"; false'
-alias trash="trash-put"
+# alias rm='echo "Use trash-put!"; false'
+# alias trash="trash-put"
 
 # qmv
 alias qmv='qmv -f do'
