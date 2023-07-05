@@ -1,0 +1,17 @@
+#!/Users/pandu/personal/moshmosh.production/env/bin/python
+import sys
+import os
+
+modulename = sys.argv[1].split('.')[0]
+
+sys.path.append('/Users/pandu/personal/moshmosh.production')
+import moshmosh
+sys.path.remove('/Users/pandu/personal/moshmosh.production')
+
+sys.path.append(os.getcwd())
+exec(f'''
+import {modulename}
+
+if hasattr({modulename}, 'main'):
+    {modulename}.main()
+''')

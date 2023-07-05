@@ -1,6 +1,7 @@
 # Unmap navigation things
 unmap r
 unmap x
+unmap X
 unmap p
 unmap P
 unmap yy

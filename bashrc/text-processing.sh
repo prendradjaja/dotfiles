@@ -4,6 +4,7 @@ alias gdiff="git diff --no-index"
 
 # less
 alias le="less"
+alias ler="less -R"
 
 # grep
 alias grep='grep --color=auto'

@@ -6,7 +6,8 @@
 HEART='♥'
 
 # This should be a shell command that gives the remaining battery percentage as a number (without percent sign) from 0 to 100.
-percentage=$(upower -i /org/freedesktop/UPower/devices/battery_BAT0 | grep percentage: | awk '{print $2}' | sed 's/\%//')
+# percentage=$(upower -i /org/freedesktop/UPower/devices/battery_BAT0 | grep percentage: | awk '{print $2}' | sed 's/\%//')
+percentage=$(pmset -g batt | grep % | sed 's/.*\t//' | sed 's/%;.*//')
 
 # Divide by ten and round up (that's what the +5 is for) to determine how many hearts are "on."
 charged_slots=$(echo "($percentage + 5) / 10" | bc)

@@ -33,18 +33,27 @@ alias hac="\
     git status        && echo ... && read && clear && \
     git diff --cached && echo ... && read && \
     git commit"
+alias hacn="\
+    export GIT_EDITOR='vim -c \"inoremap <c-m> <esc>ZZ\" -c startinsert' && \
+    git add -u        && clear && \
+    git status        && echo ... && read && clear && \
+    git diff --cached && echo ... && read && \
+    git commit -n"
 alias hach="\
     export GIT_EDITOR='vim -c \"inoremap <c-m> <esc>ZZ\" -c startinsert' && \
     git add -u .      && clear && \
     git status        && echo ... && read && clear && \
     git diff --cached && echo ... && read && \
     git commit"
+alias hap="git add -p"
 # 2 = faster
 alias hac2="\
     git add -u        && clear && \
     git diff --cached && echo ... && read && \
     git commit -m '++' && git push"
+alias log="git log"
 alias push="git push"
+alias pushnew="git push -u origin HEAD"
 alias fetch="git fetch"
 alias ff="git ff"
 # "stash apply"
@@ -54,11 +63,12 @@ function stu { git stash show -p "stash@{$1}" | git apply --reverse; }
 # "stash show"
 function sts { git show "stash@{$1}"; }
 function edit-conflicts {
-    git status && vim `git diff --name-only | uniq`
+    git grep "<<<<<<<"
+    vim `git diff --name-only | uniq`
 }
 
 # http server
-alias ph='python -m SimpleHTTPServer 8000'
+alias ph='python3 -m http.server'
 
 # tsc
 alias ftsc='node ~/prog/TypeScript-frozen/built/local/tsc.js'
@@ -69,9 +79,11 @@ alias scssdir="scss --watch scss:css"
 # python
 alias py='python'
 alias py3='python3'
+alias p='python3'
 alias ipy='ipython'
 alias ipy3='ipython3'
 export PYTHONSTARTUP="$HOME/dotfiles/pythonrc"
+alias activate-env=". env/bin/activate"
 
 # "visual bell"
 alias vbel="python -c \"for i in range(10): print '#' * 75\""
@@ -83,3 +95,6 @@ function ndo { (PATH=$(npm bin):$PATH; eval $@;) }
 
 # import git repo
 alias git-import="python ~/dotfiles/git-import/main.py"
+
+# export GIT_AUTHOR_DATE="$(python3 ~/dotfiles/extras/sunday.py) 12:00"
+# export GIT_COMMITTER_DATE="$(python3 ~/dotfiles/extras/sunday.py) 12:00"

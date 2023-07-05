@@ -9,7 +9,19 @@ export CLICOLOR=1
 
 # cd and physical directories
 mkcd () { command mkdir "$@" && cd "$@"; } # why 'command'?
-c () { cd "$@" && l; }
+# c () { cd "$@" && l; }
+echoargs () { echo "$@"; }
+c () {
+  if [ $# -eq 0 ]; then  # https://unix.stackexchange.com/questions/25945/how-to-check-if-there-are-no-parameters-provided-to-a-command
+    cd && l
+  elif [ $1 == "-" ]; then  # https://stackoverflow.com/questions/9727695/if-arguments-is-equal-to-this-string-define-a-variable-like-this-string
+    cd -
+  elif [[ -d "$1" ]]; then  # https://stackoverflow.com/questions/4665051/check-if-passed-argument-is-file-or-directory-in-bash
+    cd "$1" && l
+  else
+    vim "$1"
+  fi
+}
 # cd and c should only complete with directories (not files)
 complete -d cd
 complete -d c
@@ -29,7 +41,7 @@ alias seh='xdg-open . & exit'
 alias o='xdg-open'
 
 # use trash-put instead of rm
-alias rm='echo "Use trash-put!"; false'
+# alias rm='echo "Use trash-put!"; false'
 alias trash="trash-put"
 
 # qmv

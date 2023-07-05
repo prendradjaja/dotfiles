@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+git checkout -- src/test.ts
+if [ "$1" ]; then
+  sed -e "s,/\\\.spec,/.*$1.*\\\.spec," -i '' src/test.ts
+  yarn test:unit
+fi

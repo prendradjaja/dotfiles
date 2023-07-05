@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+set -ex
+
+yarn strict-null-check | tee snc-errors---`date -u +"%Y-%m-%d---%H:%M:%SZ"` | less -R +G
